@@ -1,20 +1,27 @@
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for(let num of array){
+    for(let i=0; i < array.length; i++){
+      console.log("This is the value of num: ", num)
+      console.log("This is the value of i: ", i)
+      if(array[i] == num){
+        console.log("The first if statement was hit")
+        i++
+        console.log("This is the value of i: ", i)
+      }
+      if (num + array[i] == target){
+        console.log("This is the value of num: ", num)
+        console.log("This is the value of i: ", i)
+        return true
+      }
+    }
+  }
+return false
 }
+  
+// hasTargetSum([3, 8, 12, 4, 11, 7], 10)
 
-/* 
-  Write the Big O time complexity of your function here
-*/
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
-
-// You can run `node index.js` to view these console logs
+// You can run node index.js to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
